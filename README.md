@@ -190,13 +190,13 @@ kubectl apply -f manifests/logging-stack
 
 #### Deploy the Kubernetes logging stack with Helm
 
-You can also deploy the Kubernetes logging stack with Helm, just need to set the `Kubernetes` parameter to `ture`:
+You can also deploy the Kubernetes logging stack with Helm, just need to set the `Kubernetes` parameter to `true`:
 
 ```shell
 helm upgrade fluent-operator --create-namespace -n fluent charts/fluent-operator/  --set Kubernetes=true,containerRuntime=docker
 ```
 
-If you want to deploy  `fluentd`, just need to set the `fluentd.enable` parameter to `ture`.:
+If you want to deploy  `fluentd`, just need to set the `fluentd.enable` parameter to `true`.:
 
 ```shell
 helm upgrade fluent-operator --create-namespace -n fluent charts/fluent-operator/  --set Kubernetes=true,containerRuntime=docker,fluentd.enable=true
